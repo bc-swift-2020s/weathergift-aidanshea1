@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		180DF01A2432924D00CFFCB5 /* DailyTableVIewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180DF0192432924D00CFFCB5 /* DailyTableVIewCell.swift */; };
+		180DF01C2432A09800CFFCB5 /* HourlyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180DF01B2432A09800CFFCB5 /* HourlyCollectionViewCell.swift */; };
 		1822D3F32416D79700750FCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822D3F22416D79700750FCB /* AppDelegate.swift */; };
 		1822D3F52416D79700750FCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822D3F42416D79700750FCB /* SceneDelegate.swift */; };
 		1822D3F72416D79800750FCB /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1822D3F62416D79700750FCB /* LocationListViewController.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		180DF0192432924D00CFFCB5 /* DailyTableVIewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTableVIewCell.swift; sourceTree = "<group>"; };
+		180DF01B2432A09800CFFCB5 /* HourlyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyCollectionViewCell.swift; sourceTree = "<group>"; };
 		1822D3EF2416D79700750FCB /* WeatherGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1822D3F22416D79700750FCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1822D3F42416D79700750FCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				18BD7ACF2429708000D7559E /* LocationDetailViewController.swift */,
 				1822D3F62416D79700750FCB /* LocationListViewController.swift */,
 				180DF0192432924D00CFFCB5 /* DailyTableVIewCell.swift */,
+				180DF01B2432A09800CFFCB5 /* HourlyCollectionViewCell.swift */,
 				1822D3F82416D79800750FCB /* Main.storyboard */,
 				1822D3FB2416D79D00750FCB /* Assets.xcassets */,
 				1822D3FD2416D79D00750FCB /* LaunchScreen.storyboard */,
@@ -233,6 +236,7 @@
 				1822D3F32416D79700750FCB /* AppDelegate.swift in Sources */,
 				18BD7AD02429708000D7559E /* LocationDetailViewController.swift in Sources */,
 				1822D3F52416D79700750FCB /* SceneDelegate.swift in Sources */,
+				180DF01C2432A09800CFFCB5 /* HourlyCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
