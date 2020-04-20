@@ -30,7 +30,13 @@
                                     <constraint firstAttribute="height" constant="44" id="o9Z-Fk-krN"/>
                                 </constraints>
                                 <items>
-                                    <barButtonItem title="About" id="keV-om-Am3"/>
+                                    <barButtonItem title="About" id="keV-om-Am3">
+                                        <connections>
+                                            <segue destination="3Ux-Hk-H1k" kind="popoverPresentation" popoverAnchorBarButtonItem="keV-om-Am3" id="i6q-WF-HR8">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="enc-5h-JeJ"/>
                                     <barButtonItem style="plain" id="LrU-MA-5fE">
                                         <pageControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="vMD-5x-fxH">
@@ -46,7 +52,7 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="xdw-V2-uid"/>
                                     <barButtonItem image="list.bullet" catalog="system" id="ZEP-Kw-HO4">
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="pdQ-ow-NnQ"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="ShowList" modalPresentationStyle="fullScreen" id="pdQ-ow-NnQ"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -245,6 +251,77 @@
             </objects>
             <point key="canvasLocation" x="-789.375" y="116.19718309859155"/>
         </scene>
+        <!--About View Controller-->
+        <scene sceneID="pY4-So-Lqj">
+            <objects>
+                <viewController id="3Ux-Hk-H1k" customClass="AboutViewController" customModule="WeatherGift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JEW-Tb-YSt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1vf-2o-KsG">
+                                <rect key="frame" x="0.0" y="504" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="UgO-2X-ghl"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Done" id="4RS-mD-CkW">
+                                        <connections>
+                                            <action selector="doneButtonPressed:" destination="3Ux-Hk-H1k" id="SWl-gR-U6n"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngV-zR-XXu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WeatherGift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EO4-j2-24F">
+                                        <rect key="frame" x="26" y="0.0" width="268" height="88"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="64"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clear-night" translatesAutoresizingMaskIntoConstraints="NO" id="aES-3l-drh">
+                                        <rect key="frame" x="8" y="67" width="304" height="212"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Made by: Aidan Shea" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D1C-P3-8Qc">
+                                        <rect key="frame" x="8" y="264" width="304" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="powered_by_darksky" translatesAutoresizingMaskIntoConstraints="NO" id="7jI-I2-Lzo">
+                                        <rect key="frame" x="8" y="287" width="150" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="powered_by_google_on_white" translatesAutoresizingMaskIntoConstraints="NO" id="O5L-k5-M7l">
+                                        <rect key="frame" x="156" y="287" width="150" height="79"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="T0E-4o-umx" firstAttribute="trailing" secondItem="ngV-zR-XXu" secondAttribute="trailing" id="4OA-LO-RPJ"/>
+                            <constraint firstItem="ngV-zR-XXu" firstAttribute="leading" secondItem="T0E-4o-umx" secondAttribute="leading" id="CbD-o9-y8i"/>
+                            <constraint firstItem="1vf-2o-KsG" firstAttribute="leading" secondItem="T0E-4o-umx" secondAttribute="leading" id="ESt-gA-FRW"/>
+                            <constraint firstItem="1vf-2o-KsG" firstAttribute="top" secondItem="ngV-zR-XXu" secondAttribute="bottom" id="Ess-2e-pZA"/>
+                            <constraint firstItem="1vf-2o-KsG" firstAttribute="trailing" secondItem="T0E-4o-umx" secondAttribute="trailing" id="KQK-oC-scG"/>
+                            <constraint firstItem="ngV-zR-XXu" firstAttribute="top" secondItem="T0E-4o-umx" secondAttribute="top" id="OXI-qg-O7A"/>
+                            <constraint firstItem="1vf-2o-KsG" firstAttribute="bottom" secondItem="T0E-4o-umx" secondAttribute="bottom" id="tbZ-B6-3Lg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="T0E-4o-umx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNK-LR-iS7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-789.375" y="859.85915492957747"/>
+        </scene>
         <!--Location List View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -276,24 +353,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="XUu-F2-npT" detailTextLabel="xRF-e3-JCg" style="IBUITableViewCellStyleSubtitle" id="xFS-zs-tJh">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="55.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="XUu-F2-npT" style="IBUITableViewCellStyleDefault" id="xFS-zs-tJh">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xFS-zs-tJh" id="oSO-PY-aEt">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XUu-F2-npT">
-                                                    <rect key="frame" x="15" y="10" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xRF-e3-JCg">
-                                                    <rect key="frame" x="15" y="31.5" width="44" height="14.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -331,8 +401,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="clear-night" width="602" height="376"/>
         <image name="cloud" catalog="system" width="64" height="42"/>
         <image name="list.bullet" catalog="system" width="64" height="44"/>
+        <image name="powered_by_darksky" width="356" height="142"/>
+        <image name="powered_by_google_on_white" width="144" height="18"/>
         <image name="rain" width="300" height="168"/>
         <image name="raindrop" width="34" height="50"/>
     </resources>
