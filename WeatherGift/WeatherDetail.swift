@@ -105,7 +105,7 @@ class WeatherDetail: WeatherLocation {
                 print("😡 ERROR: \(error.localizedDescription)")
             }
             
-            // note: there are soem additional things that could go wrong when using URL session, but we shouldn't experience them, so we'll ignore testing for these for now...
+            // note: there are some additional things that could go wrong when using URL session, but we shouldn't experience them, so we'll ignore testing for these for now...
             
             // deal with the data
             do {
